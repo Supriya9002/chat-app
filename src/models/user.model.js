@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ["user" | "admin"],
+      enum: ["user", "admin"],
       default: "user",
     },
     isOnline: {
@@ -35,10 +35,6 @@ const UserSchema = new mongoose.Schema(
         token: {
           type: String,
           required: true,
-        },
-        device: {
-          type: String,
-          default: "unknown",
         },
         createAt: {
           type: Date,

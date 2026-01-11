@@ -23,10 +23,13 @@ const MessageSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["sent" | "delivered" | "read"],
+      enum: ["sent" , "delivered" , "read"],
       default: "sent",
     },
-    isDeleted: Boolean,
+    isDeleted: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );
