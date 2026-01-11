@@ -10,13 +10,13 @@ import bodyParser from "body-parser";
 app.use(bodyParser.json());
 
 // routers
-app.use("/api/auth", UserRouter)
+app.use("/api/auth", UserRouter);
 
 app.get("/", (req, res) => {
   res.send("Welcome to Chat App");
 });
 
-// ❗ MUST BE LAST
+// ❗ Error Handle Middleware
 app.use(errorHandler);
 
 app.listen(process.env.PORT, async () => {
